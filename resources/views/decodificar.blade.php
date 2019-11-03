@@ -26,25 +26,18 @@
                     <div class="col">
                         <div id="choose" class="row">
                         <span>Senha:</span>
-                            <div class="col-6">
-                                <input 
-                                    type='password' 
-                                    id='password2' 
-                                    class='password'
-                                    placeholder='Senha' 
-                                />
+                        <div class="col-6">
+                            <input 
+                                type='password' 
+                                id='password2' 
+                                class='password'
+                                placeholder='Senha' 
+                            />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button 
-            id="decode" 
-            class="btn btn-outline-primary"
-            type="submit" 
-        >
-            Revelar Mensagem
-        </button>
             <div class="row">
                 <div id='reveal' class="col-6">
                     <span>Mensagem oculta:</span>
@@ -59,6 +52,13 @@
             </div>
             <br>
             <br>
+            <button id='encode' class='submit' hidden></button>
+            <button 
+                id="decode" 
+                class="submit"
+            >
+                Revelar Mensagem
+            </button>
 </div>	
 
 @endsection

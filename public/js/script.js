@@ -285,7 +285,6 @@ function inicia()
     {
         if(!ejecutaVideo)
         {
-            //Solicitar la cámara al usuario...
             navigator.getMedia = ( navigator.getUserMedia ||
                                    navigator.webkitGetUserMedia ||
                                    navigator.mozGetUserMedia ||
