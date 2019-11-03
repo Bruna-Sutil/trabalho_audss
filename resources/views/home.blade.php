@@ -11,20 +11,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <form 
-                        action="{{route('imagesupload')}}" 
-                        method="POST" 
-                        class="form"
-                        enctype="multipart/form-data"
-                    >
-                        @csrf
-                        <label for="imagem">Imagem:</label>
-                        <img id="preview" />
-                        <input type="text" name="name">
-                        <input type="file" id="file" name="image"/>
-                        <br/>
-                        <input type="submit" value="Enviar"/>
-                    </form>
+                    teste
                 </div>
             </div>
         </div>

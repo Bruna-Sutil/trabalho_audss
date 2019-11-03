@@ -45,10 +45,10 @@
 							<div>
 								{{ $image->image }}
 								{{-- <img src="data:image/png;base64,{{ chunk_split(base64_encode($image->image)) }}" /> --}}
-								<img src="{{ url("images/{$image->image}") }}" alt="{{ $image->name }}">
+								{{-- <img src="{{Storage::url('app/public/images/{{$image->id}}')}}"> --}}
 							</div>
 							<div class="card-body">
-							<p class="card-text">{{ $image->name }}</p>
+							<p class="card-text">{{ $image->id }}</p>
 							</div>
 						</div>
 					@endforeach
