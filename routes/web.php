@@ -30,6 +30,9 @@ Route::get('login/github/callback', 'Auth\LoginController@handleProviderGithubCa
 
 Route::get('/produtoservicos', 'ProduServiController@index')->name('produtoservicos');
 
+Route::get('/images', 'ImageController@index')->name('images');
+Route::post('/images/upload', 'ImageController@store')->name('imagesupload');
+
 Route::middleware(['auth','can:admin'])->group(function(){
     
     Route::get('/produtoservicocrud', 'ProduServiController@viewCrud')->name('produtoservicocrud');

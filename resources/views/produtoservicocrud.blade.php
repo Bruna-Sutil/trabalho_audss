@@ -450,7 +450,7 @@
 	</div>
 </div>
 @else
-	<h4>Não tem serviços ou produtos cadastrados</h4>
+	<h4>Não tem mensagens ocultas</h4>
 @endif
 
 

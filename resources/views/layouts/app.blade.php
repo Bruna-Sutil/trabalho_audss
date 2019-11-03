@@ -42,7 +42,7 @@
                     <ul class="navbar-nav mr-auto">
                         @can('admin')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('produtoservicocrud') }}">Gerenciamento de Produtos e Serviços</a>
+                            <a class="nav-link" href="{{ url('images') }}">Mensagens Ocultas</a>
                         </li>
                         @endcan
                     </ul>

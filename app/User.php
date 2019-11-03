@@ -41,6 +41,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Model\ProdutoServico');
     }
 
+    public function images() {
+        return $this->hasMany('App\Model\Image');
+    }
+
     /**
      * Route notifications for the mail channel.
      *
