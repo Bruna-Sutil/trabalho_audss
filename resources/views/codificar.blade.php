@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-6">
                         <input type="text" name="name">
-                        <input type="file" id="file" name="image" required/>
+                        <input type="file" id="file" name="image" />
                     </div>
                     <div class="col-6">
                         <div class="card" style="width: 50rem; border:none;">
@@ -75,7 +75,7 @@
                     class="btn btn-outline-primary"
                     type="submit" 
                 >
-                    Ocultar Menssagem
+                    Ocultar Mensagem
                 </button>
             </form>
         </div>

@@ -18,6 +18,11 @@ class ImageController extends Controller
     {
         $images = Image::all();
         return view('images', compact('images'));
+        // $images = Image::where('images', images)->get()->pluck('path');
+
+        // return view('images')->with([
+        //     'images' => $images
+        // ]);
     }
 
     public function codificar()
@@ -79,7 +84,7 @@ class ImageController extends Controller
             $request->all()
         );
     
-        return redirect('/home');
+        return redirect('/decodificar');
     }
 
     /**
