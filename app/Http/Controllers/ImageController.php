@@ -18,11 +18,6 @@ class ImageController extends Controller
     {
         $images = Image::all();
         return view('images', compact('images'));
-        // $images = Image::where('images', images)->get()->pluck('path');
-
-        // return view('images')->with([
-        //     'images' => $images
-        // ]);
     }
 
     public function gallery()
@@ -75,6 +70,8 @@ class ImageController extends Controller
             $nameFile = "{$name}.{$extension}";
     
             $upload = $request->image->storeAs('images', $nameFile);
+
+            $request->request->add(['name' => $nameFile]);
 
             if ( !$upload )
                 return redirect()
