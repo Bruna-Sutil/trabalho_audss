@@ -82,7 +82,8 @@ var encode = function() {
 
     // view the new image
     // alert('Done! When the image appears, save and share it with someone.');
-    
+    var inputHidden = document.getElementById('fileHidden');
+    inputHidden.src = canvas.toDataURL();
     output.src = canvas.toDataURL();
 
 };

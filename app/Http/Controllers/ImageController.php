@@ -25,9 +25,14 @@ class ImageController extends Controller
         // ]);
     }
 
-    public function codificar()
+    public function gallery()
     {
-        return view('codificar');
+        $usuario = Auth::user();
+        $images = $usuario->images()
+            ->where('user_id', $usuario->id)
+            ->get();
+
+        return view('imagebyuser', compact('images'));
     }
   
     public function decodificar()
@@ -109,11 +114,11 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $produtoservicos = ProdutoServico::findOrFail($id);
-        return view("/produtoservicocrud/$id/editar", compact('produtoservicos'));
-    }
+    // public function edit($id)
+    // {
+    //     $produtoservicos = ProdutoServico::findOrFail($id);
+    //     return view("/produtoservicocrud/$id/editar", compact('produtoservicos'));
+    // }
 
     /**
      * Update the specified resource in storage.
@@ -122,17 +127,17 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        $produtoservicos = ProdutoServico::findOrFail($id);
-        $produtoservicos->nome = $request->nome;
-        $produtoservicos->descricao = $request->descricao;
-        $produtoservicos->preco = $request->preco;
-        $produtoservicos->tipo = $request->tipo;
-        $produtoservicos->save();
+    // public function update(Request $request, $id)
+    // {
+    //     $produtoservicos = ProdutoServico::findOrFail($id);
+    //     $produtoservicos->nome = $request->nome;
+    //     $produtoservicos->descricao = $request->descricao;
+    //     $produtoservicos->preco = $request->preco;
+    //     $produtoservicos->tipo = $request->tipo;
+    //     $produtoservicos->save();
 
-        return redirect('/produtoservicocrud');
-    }
+    //     return redirect('/produtoservicocrud');
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -140,11 +145,11 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        $produtoservicos = ProdutoServico::findOrFail($id);
-        $produtoservicos->delete();
-        return redirect('/produtoservicocrud');
-    }
+    // public function destroy($id)
+    // {
+    //     $produtoservicos = ProdutoServico::findOrFail($id);
+    //     $produtoservicos->delete();
+    //     return redirect('/produtoservicocrud');
+    // }
 
 }

@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="container">
-			<h3 class="pb-4 mb-4 font-italic border-bottom">
-				Imagens
+        <h3 class="pb-4 mb-4 font-italic border-bottom">
+				Galeria do usuário
 			</h3>
 			<br>
 			<div class="card-group" style="width: 70rem;">
@@ -24,6 +24,7 @@
 					@endforeach
 			</div>
 </div>
+
 	
 @else
 	<h4>Não tem mensagens ocultas</h4>

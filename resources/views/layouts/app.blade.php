@@ -52,10 +52,10 @@
                         </li>
                         @endcan
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('codificar') }}">Codificar</a>
+                            <a class="nav-link" href="{{ url('gallery') }}">Minhas imagens</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('decodificar') }}">Decodificar</a>
+                            <a class="nav-link" href="{{ url('decodificar') }}">Ocultar mensagem</a>
                         </li>
                     </ul>
 
