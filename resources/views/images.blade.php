@@ -7,16 +7,20 @@
 				Imagens
 			</h3>
 			<br>
-			<div class="card-group" style="max-width: 20rem;">
+			<div class="card-deck">
 				@if(!empty($images))
 					@foreach($images as $image)
-						<div class="card">
-							<img src="{{asset("storage/images/{$image->name}")}}" alt="">
-							<div class="card-body">
-								<p class="card-text">Id do usuário: {{ $image->user_id }}</p>
-								<p class="card-text">Criada em: {{ $image->created_at }}</p>
-							</div>
+					<div class="card" style="max-width: 18rem !important;">
+						<img 
+							class="imageCard card-img-top"
+							src="{{asset("storage/images/{$image->name}")}}" 
+							alt=""
+						>
+						<div class="card-body">
+							<p class="card-text">Id do usuário: {{ $image->user_id }}</p>
+							<p class="card-text">Criada em: {{ $image->created_at }}</p>
 						</div>
+					</div>
 					@endforeach
 			</div>
 </div>

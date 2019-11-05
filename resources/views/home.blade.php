@@ -11,7 +11,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    teste
                 </div>
             </div>
         </div>

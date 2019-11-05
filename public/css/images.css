@@ -2,3 +2,15 @@ img {
     max-width: 50%;
     max-height: 50%;
 }
+
+.imageCard {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+  /* com três cards por linha */
+  @media (min-width: 1140px){
+    .imageCard:nth-of-type(4n+1){
+      clear: left;
+    }
+  }
