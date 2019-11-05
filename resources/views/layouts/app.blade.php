@@ -48,11 +48,11 @@
                     <ul class="navbar-nav mr-auto">
                         @can('admin')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('images') }}">Mensagens Ocultas</a>
+                            <a class="nav-link" href="{{ url('images') }}">Gerenciar Mensagens</a>
                         </li>
                         @endcan
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('gallery') }}">Minhas imagens</a>
+                            <a class="nav-link" href="{{ url('gallery') }}">Galeria</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('decodificar') }}">Ocultar mensagem</a>

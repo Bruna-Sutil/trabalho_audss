@@ -12,9 +12,7 @@
 					@foreach($images as $image)
 						<div class="card">
 							<div>
-								{{-- {{ $image->image }} --}}
-								<img src="data:image/png;base64,{{ chunk_split(base64_encode($image->image)) }}" />
-								{{-- <img src="{{Storage::url('images/{{$image->id}}')}}"> --}}
+                                <img src="{{asset("storage/images/{$image->name}")}}" alt="">
 							</div>
 							<div class="card-body">
 								<p class="card-text">Id do usuário: {{ $image->user_id }}</p>
